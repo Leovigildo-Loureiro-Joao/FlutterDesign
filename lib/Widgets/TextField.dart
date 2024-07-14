@@ -1,46 +1,25 @@
 import 'package:flutter/material.dart';
 
-class TextFields extends StatefulWidget {
-  const TextFields({super.key});
-
-  @override
-  State<TextFields> createState() => _TextFieldsState();
-}
-
-class _TextFieldsState extends State<TextFields> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(16.0),
-      child: const TextField(
-              decoration: InputDecoration(
-              hintText:"oi eu sou o leo",//placeholder
-              labelText:"Label",//value
-              labelStyle: TextStyle(
-                color: Colors.blue,
-                fontWeight: FontWeight.bold,
-              ),
-              border: UnderlineInputBorder(
-               borderSide: BorderSide(
-                    color: Colors.blue,
+  Container inputs(params,Icon ico) {
+      return  Container(
+              padding: const EdgeInsets.only(left: 40 , right: 40),
+              margin: const EdgeInsets.only(top: 20,bottom: 20),
+              child: TextField(
+                
+                decoration: InputDecoration(
+                  labelText: params,
+                  suffixIcon: ico,
+                  border: const UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 1,
+                    )
                   ),
-              ),
-              focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.blue,
-                    width: 2.0,
-                  ),
+                  enabledBorder: const UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 1
+                    )
+                  )
                 ),
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.grey,
-                    width: 1.0,
-                  ),
-                ),
-                prefixIcon: Icon(Icons.person),
-            )
-          )
-    );
+              ),
+          );
   }
-}
-

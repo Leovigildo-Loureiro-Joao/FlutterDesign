@@ -18,7 +18,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/fundo.jpg
-    - assets/top.png
-    - assets/bottom.png
+    - assets/flutter_50px.png
     
